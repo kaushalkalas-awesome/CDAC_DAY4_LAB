@@ -46,6 +46,10 @@ class Date{
 		this.year = year;
 	}
 	
+	public void displayDate() {
+		System.out.println("Date: "+this.day+"/"+this.month+"/"+this.year);
+	}
+	
 }
 
 class DateTest{
@@ -61,20 +65,16 @@ class DateTest{
 		System.out.print("Enter Year: ");
 		d.setYear(sc.nextInt());
 	}
-	
-	public void displayDate() {
-		System.out.println("Date: "+d.getDay()+"/"+d.getMonth()+"/"+d.getYear());
-	}
 }
 
 public class ProgramOne {
 
 	public static void main(String[] args) {
 		DateTest dt = new DateTest();
-		dt.displayDate();
+		dt.d.displayDate();
 		
 		dt.setDate();
-		dt.displayDate();
+		dt.d.displayDate();
 	}
 
 }
