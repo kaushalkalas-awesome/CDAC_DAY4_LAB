@@ -10,13 +10,13 @@ class Invoice{
 		this.prt_num = prt_num;
 		this.prt_des = prt_des;
 		
-		if(!(prt_qua==0)) {
+		if(!(prt_qua<=0)) {
 			this.prt_qua = prt_qua;
 		} else {
 			this.prt_qua = 0;
 		}
 		
-		if(!(prt_pri==0)) {
+		if(!(prt_pri<=0)) {
 			this.prt_pri = prt_pri;
 		} else {
 			this.prt_pri = 0;
@@ -87,7 +87,7 @@ class Invoice{
 class InvoiceTest {
 	
 	//Init
-	Invoice i1 = new Invoice("123456789","Tin, Steel",3,55.5);
+	Invoice i1 = new Invoice("123456789","Tin, Steel",5,55.5);
 	
 	void invoiceDis() {
 		System.out.println("Part Number: "+i1.getPrt_num());
